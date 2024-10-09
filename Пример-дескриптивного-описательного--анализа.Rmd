@@ -1,0 +1,82 @@
+---
+title: "Описательный статистический и кластерный анализ итоговых значений тестирования мотивации с применением пакета Statistica"
+author: "Наимов А.Н., Панфилова О.А."
+journal: "ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ В УПРАВЛЕНИИ, ОБУЧЕНИИ, ПРАВООХРАНИТЕЛЬНОЙ ДЕЯТЕЛЬНОСТИ"
+date: "2019"
+url: "https://elibrary.ru/item.asp?id=39152170"
+output:
+  pdf_document:
+    latex_engine: xelatex
+  html_document:
+    df_print: paged
+keep_markdown: true        
+keep_tex: true
+bibliography: bib_files/lit.bib
+header-includes:
+   - \XeTeXdefaultencoding utf8
+   - \usepackage{xltxtra}
+   - \usepackage{fontspec}
+   - \setmainfont{Times New Roman}
+   - \setsansfont{Arial}
+   - \setmonofont{Courier New}
+   - \newfontfamily{\cyrillicfont}{Times New Roman}
+   - \newfontfamily{\cyrillicfonttt}{Courier New} 
+   - \newfontfamily{\cyrillicfontsf}{Arial} 
+   - \usepackage[provide=*,english,russian]{babel}
+---
+```{r, include=FALSE}
+dir.create("bib_files")
+download.file("https://raw.githubusercontent.com/TomTomen/R/RR/markdown/lit.bib", "bib_files/lit.bib")
+#download.file("https://raw.githubusercontent.com/TomTomen/R/refs/heads/RR/markdown/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA.jpg", "bib_files/Снимок.jpg")
+```
+## **Журнал**: Информационные технологии в управлении, обучении, правоохранительной деятельности  
+### **URL**: [https://elibrary.ru/item.asp?id=39152170](https://elibrary.ru/item.asp?id=39152170)
+
+# Обоснование:
+К итоговым значениям из таблицы 1 применен описательный статистический анализ и кластерный анализ [@frst]. Описательная статистика в пакете Statistica реализована в виде процедур обработки данных, состоящих из:
+\begin{itemize}
+  \item группировки данных по их значениям,
+  \item построения распределения частот данных и гистограмм,
+  \item выявления центральных тенденций распределения данных (например, среднего арифметического значения),
+оценки разброса данных по отношению к центральным тенденциям (стандартное отклонение, дисперсия, коэффициент вариации).
+\end{itemize}
+Оценка коэффициента детерминации осуществляется по формуле:
+\begin{equation}
+R^2 = 1 - \frac{\sum_{i=1}^{m} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{m} (y_i - \bar{y})^2}
+\end{equation}
+
+  #\hfillТаблица 3 
+
+
+
+
+Наблюдаемые $x_k^2$ и рассчитанные значения  $\tilde{x}_k^2$
+
+| k | 1     | 2     | 3     | 4     | 5     | 6     | 7     | 8     | 9     |
+|---|-------|-------|-------|-------|-------|-------|-------|-------|-------|
+| \( kx \) (руб.) | 11720 | 13030 | 14420 | 16360 | 19130 | 20640 | 22390 | 23190 | 25570 |
+| \( \tilde{kx} \) (руб.) | 11210 | 13530 | 15290 | 16440 | 18080 | 20700 | 21970 | 23690 | 24080 |
+
+# Таблица 4
+Наблюдаемые \( kx \) и рассчитанные значения \( \tilde{kx} \)
+
+```{r, echo=FALSE}
+library(knitr)
+
+
+table4 <- data.frame(
+  k = 1:9,
+  kx = c(709.3, 688.8, 682.8, 689.1, 702.8, 705.6, 711.0, 701.9, 708.6),
+  kx_tilde = c(698.0, 697.6, 701.5, 690.3, 697.7, 703.3, 704.2, 699.3, 706.5)
+)
+
+# Вывод таблицы 4
+kable(table4, caption = "Таблица 4: Наблюдаемые kx и рассчитанные значения kx~", digits = 1)
+```
+![image](bib_files/Снимок.png)
+
+
+
+
+
+
