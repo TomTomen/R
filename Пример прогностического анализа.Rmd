@@ -1,0 +1,37 @@
+---
+title: "АНАЛИЗ ИНФОРМАТИВНОСТИ ДАННЫХ ПРИ ПОСТРОЕНИИ ПРОГНОЗНОЙ МОДЕЛИ ЦЕНЫ НА ЭЛЕКТРОЭНЕРГИЮ"
+author: "Н. Ю. Петухова"
+journal: "Технические науки. Информатика, вычислительная техника"
+date: "2019"
+doi: "DOI: 10.21685/2072-3059-2019-3-2"
+url: "https://elibrary.ru/item.asp?id=39152170"
+output:
+  html_document:
+    df_print: paged
+  pdf_document:
+    latex_engine: xelatex
+keep_markdown: true        
+keep_tex: true        
+header-includes:
+   - \XeTeXdefaultencoding utf8
+   - \usepackage{xltxtra}
+   - \usepackage{fontspec}
+   - \setmainfont{Times New Roman}
+   - \setsansfont{Arial}
+   - \setmonofont{Courier New}
+   - \newfontfamily{\cyrillicfont}{Times New Roman}
+   - \newfontfamily{\cyrillicfonttt}{Courier New} 
+   - \newfontfamily{\cyrillicfontsf}{Arial} 
+   - \usepackage[english,russian]{babel}
+---
+### **Журнал**: Технические науки. Информатика, вычислительная техника  
+**DOI**: [10.21685/2072-3059-2019-3-2](https://doi.org/10.21685/2072-3059-2019-2-2)
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Обоснование:
+   
+Рассматривается задача построения эффективного метода прогноза показателей равновесной цены и результаты его применения
+цитата
+Вычислительный эксперимент показал, что рост потенциальной прибы- Эли при увеличении точности прогноза на 1% колеблется от 1,7до 4,7% при- были для различных ТЭЦ и зависит от сезона года и технико-экономических особенностей работы станций [7] .
