@@ -6,12 +6,13 @@ date: "2019"
 doi: "DOI: 10.21685/2072-3059-2019-3-2"
 url: "https://elibrary.ru/item.asp?id=39152170"
 output:
-  html_document:
-    df_print: paged
   pdf_document:
     latex_engine: xelatex
+  html_document:
+    df_print: paged
 keep_markdown: true        
-keep_tex: true        
+keep_tex: true 
+bibliography: bib_files/lit.bib
 header-includes:
    - \XeTeXdefaultencoding utf8
    - \usepackage{xltxtra}
@@ -27,6 +28,11 @@ header-includes:
 ### **Журнал**: Технические науки. Информатика, вычислительная техника  
 **DOI**: [10.21685/2072-3059-2019-3-2](https://doi.org/10.21685/2072-3059-2019-2-2)
 
+```{r, include=FALSE}
+dir.create("bib_files")
+download.file("https://raw.githubusercontent.com/TomTomen/R/RR/markdown/lit.bib", "bib_files/lit.bib")
+#download.file("https://raw.githubusercontent.com/TomTomen/R/refs/heads/RR/markdown/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA.jpg", "bib_files/Снимок.jpg")
+```
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -34,4 +40,46 @@ knitr::opts_chunk$set(echo = TRUE)
    
 Рассматривается задача построения эффективного метода прогноза показателей равновесной цены и результаты его применения
 цитата
-Вычислительный эксперимент показал, что рост потенциальной прибы- Эли при увеличении точности прогноза на 1% колеблется от 1,7до 4,7% при- были для различных ТЭЦ и зависит от сезона года и технико-экономических особенностей работы станций [7] .
+Вычислительный эксперимент показал, что рост потенциальной прибы- Эли при увеличении точности прогноза на 1% колеблется от 1,7до 4,7% при- были для различных ТЭЦ и зависит от сезона года и технико-экономических особенностей работы станций [@W3].
+
+Постановка задачи включает два этапа:
+
+1) По выборке {$x_i$} построить алгоритм $a \in A$, где $A$ – множество базовых алгоритмов;  
+2) Этап применения $a$: вводится неотрицательная функция потерь $L(a, x) \geq 0$, характеризующая ошибку алгоритма $a$, и функционал качества.
+\begin{equation}
+R^2 = 1 - \frac{\sum_{i=1}^{m} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{m} (y_i - \bar{y})^2}
+\end{equation}
+
+```{r, echo=FALSE, results='asis'}
+# Проверяем тип выходного документа
+doc_format <- knitr::opts_knit$get("rmarkdown.pandoc.to")
+
+if (doc_format == "html") {
+  # Для HTML выводим текст с анимацией радуги
+  cat('<style>
+@keyframes rainbow {
+  0% { color: red; }
+  14% { color: orange; }
+  28% { color: yellow; }
+  42% { color: green; }
+  57% { color: blue; }
+  71% { color: indigo; }
+  85% { color: violet; }
+  100% { color: red; }
+}
+
+.rainbow-text {
+  font-size: 24px; 
+  animation: rainbow 2s linear infinite;
+  display: inline-block; /* Чтобы текст выравнивался по правому краю */
+  float: right; /* Выровнять по правому краю */
+}
+</style>
+<div style="text-align: right;">
+<a class="rainbow-text" href="https://github.com/TomTomen/R">Мой Git-hub</a>
+</div>')
+} else {
+  # Для других форматов просто выводим текст без анимации
+ cat('\\textcolor{red}{Мой} \\textcolor{orange}{Git-} \\textcolor{black}{hub} \\textcolor{blue}{(https://github.com/TomTomen/R)}')
+
+}

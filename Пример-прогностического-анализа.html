@@ -9,11 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Наимов А.Н., Панфилова О.А." />
+<meta name="author" content="Н. Ю. Петухова" />
 
 <meta name="date" content="2019-01-01" />
 
-<title>Описательный статистический и кластерный анализ итоговых значений тестирования мотивации с применением пакета Statistica</title>
+<title>АНАЛИЗ ИНФОРМАТИВНОСТИ ДАННЫХ ПРИ ПОСТРОЕНИИ ПРОГНОЗНОЙ МОДЕЛИ ЦЕНЫ НА ЭЛЕКТРОЭНЕРГИЮ</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1644,156 +1644,39 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Описательный статистический и кластерный
-анализ итоговых значений тестирования мотивации с применением пакета
-Statistica</h1>
-<h4 class="author">Наимов А.Н., Панфилова О.А.</h4>
+<h1 class="title toc-ignore">АНАЛИЗ ИНФОРМАТИВНОСТИ ДАННЫХ ПРИ
+ПОСТРОЕНИИ ПРОГНОЗНОЙ МОДЕЛИ ЦЕНЫ НА ЭЛЕКТРОЭНЕРГИЮ</h1>
+<h4 class="author">Н. Ю. Петухова</h4>
 <h4 class="date">2019</h4>
 
 </div>
 
 
-<div id="журнал-информационные-технологии-в-управлении-обучении-правоохранительной-деятельности" class="section level2">
-<h2><strong>Журнал</strong>: Информационные технологии в управлении,
-обучении, правоохранительной деятельности</h2>
-<div id="url-httpselibrary.ruitem.aspid39152170" class="section level3">
-<h3><strong>URL</strong>: <a href="https://elibrary.ru/item.asp?id=39152170">https://elibrary.ru/item.asp?id=39152170</a></h3>
-</div>
+<div id="журнал-технические-науки.-информатика-вычислительная-техника" class="section level3">
+<h3><strong>Журнал</strong>: Технические науки. Информатика,
+вычислительная техника</h3>
+<p><strong>DOI</strong>: <a href="https://doi.org/10.21685/2072-3059-2019-2-2">10.21685/2072-3059-2019-3-2</a></p>
 </div>
 <div id="обоснование" class="section level1">
 <h1>Обоснование:</h1>
-<p>К итоговым значениям из таблицы 1 применен описательный
-статистический анализ и кластерный анализ <span class="citation">(Боровков 2013)</span>. Описательная статистика в
-пакете Statistica реализована в виде процедур обработки данных,
-состоящих из:</p>
-<ul>
-<li>Группировки данных по их значениям,</li>
-<li>Построение распределения частот данных и гистограмм,</li>
-<li>Выявление центральных тенденций распределения данных (например,
-среднего арифметического значения),</li>
-<li>Оценки разброса данных по отношению к центральным тенденциям
-(стандартное отклонение, дисперсия, коэффициент вариации).</li>
-</ul>
-<p>Оценка коэффициента детерминации осуществляется по формуле:</p>
-<p><span class="math display">\[\begin{equation}
+<p>Рассматривается задача построения эффективного метода прогноза
+показателей равновесной цены и результаты его применения цитата
+Вычислительный эксперимент показал, что рост потенциальной прибы- Эли
+при увеличении точности прогноза на 1% колеблется от 1,7до 4,7% при-
+были для различных ТЭЦ и зависит от сезона года и технико-экономических
+особенностей работы станций <span class="citation">(<span>“Atsenergo”</span> 2013)</span>.</p>
+<p>Постановка задачи включает два этапа:</p>
+<ol style="list-style-type: decimal">
+<li>По выборке {<span class="math inline">\(x_i\)</span>} построить
+алгоритм <span class="math inline">\(a \in A\)</span>, где <span class="math inline">\(A\)</span> – множество базовых алгоритмов;<br />
+</li>
+<li>Этап применения <span class="math inline">\(a\)</span>: вводится
+неотрицательная функция потерь <span class="math inline">\(L(a, x) \geq
+0\)</span>, характеризующая ошибку алгоритма <span class="math inline">\(a\)</span>, и функционал качества. <span class="math display">\[\begin{equation}
 R^2 = 1 - \frac{\sum_{i=1}^{m} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{m} (y_i
 - \bar{y})^2}
-\end{equation}\]</span></p>
-<p>Таблица 3</p>
-<p>Наблюдаемые <span class="math inline">\(k_x^2\)</span> и рассчитанные
-значения <span class="math inline">\(\tilde{k_x}^2\)</span> </p>
-<table>
-<colgroup>
-<col width="4%" />
-<col width="10%" />
-<col width="10%" />
-<col width="10%" />
-<col width="10%" />
-<col width="10%" />
-<col width="10%" />
-<col width="10%" />
-<col width="10%" />
-<col width="10%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>k</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-<th>9</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(k_x^2\)</span> (руб.)</td>
-<td>11720</td>
-<td>13030</td>
-<td>14420</td>
-<td>16360</td>
-<td>19130</td>
-<td>20640</td>
-<td>22390</td>
-<td>23190</td>
-<td>25570</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\tilde{k_x^2}\)</span> (руб.)</td>
-<td>11210</td>
-<td>13530</td>
-<td>15290</td>
-<td>16440</td>
-<td>18080</td>
-<td>20700</td>
-<td>21970</td>
-<td>23690</td>
-<td>24080</td>
-</tr>
-</tbody>
-</table>
-<p>Таблица 4</p>
-<p>Наблюдаемые <span class="math inline">\(k_x^1\)</span> и рассчитанные
-значения <span class="math inline">\(\tilde{k_x^1}\)</span> </p>
-<table>
-<colgroup>
-<col width="4%" />
-<col width="10%" />
-<col width="10%" />
-<col width="10%" />
-<col width="10%" />
-<col width="10%" />
-<col width="10%" />
-<col width="10%" />
-<col width="10%" />
-<col width="10%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>k</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-<th>9</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(k_x^1\)</span> (тыс. чел.)</td>
-<td>709,3</td>
-<td>688,8</td>
-<td>682,8</td>
-<td>689,1</td>
-<td>702,8</td>
-<td>705,6</td>
-<td>711</td>
-<td>701,9</td>
-<td>708,6</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\tilde{k_x^1}\)</span> (тыс. чел.)</td>
-<td>698,0</td>
-<td>697,6</td>
-<td>701,5</td>
-<td>690,3</td>
-<td>697,7</td>
-<td>703,3</td>
-<td>704,2</td>
-<td>699,3</td>
-<td>706,5</td>
-</tr>
-</tbody>
-</table>
-<!--![](bib_files/Снимок.png)-->
+\end{equation}\]</span></li>
+</ol>
 <style>
 @keyframes rainbow {
 0% { color: red; }
@@ -1816,9 +1699,8 @@ float: right;
 Git-hub</a></p>
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
-<div id="ref-frst" class="csl-entry">
-Боровков, В. П. 2013. <em>Популярное Введение в Современный Анализ
-Данных в Системе STATISTICA</em>. М.
+<div id="ref-W3" class="csl-entry">
+<span>“Atsenergo.”</span> 2013. 2013. <a href="https://www.atsenergo.ru/">https://www.atsenergo.ru/</a>.
 </div>
 </div>
 </div>
